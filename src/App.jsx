@@ -1,12 +1,10 @@
 import './App.css'
-import Title from './components/Pages/Title'
-import Game from './components/Pages/Game'
+import TicTacToeGamePage from './components/Pages/TicTacToeGamePage'
 
 function App() {
   return (
     <>
-      <Title />
-      <Game />
+      <TicTacToeGamePage />
     </>
   )
 }
