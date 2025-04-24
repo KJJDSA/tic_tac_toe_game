@@ -5,8 +5,7 @@ const StatusBar = ({target, status}) => {
     targetData: ["플레이어1", "플레이어2"],
     statusData: {
       turn: "턴",
-      win: "승리",
-      lose: "패배",
+      win: "승리"
     }
   }
   return (

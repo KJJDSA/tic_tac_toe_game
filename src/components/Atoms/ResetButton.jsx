@@ -1,9 +1,9 @@
 import React from 'react'
 
-const ResetButton = ({ children }) => {
+const ResetButton = ({ onReset, children }) => {
   return (
     <div>
-      <button>{children}</button>
+      <button onClick={onReset} >{children}</button>
     </div>
   )
 }
