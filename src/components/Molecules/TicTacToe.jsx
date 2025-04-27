@@ -1,6 +1,7 @@
 import React from 'react'
 import StatusBar from '../Atoms/StatusBar'
 import ResetButton from '../Atoms/ResetButton'
+import TicTacToeBox from '../Atoms/TicTacToeBox'
 
 const TicTacToe = () => {
   const dummyData = {
@@ -73,20 +74,13 @@ const TicTacToe = () => {
             <div key={rowIndex} style={{ display: "flex"}}>
               {row.map((col, colIndex) => {
                 return (
-                  <div
-                    key={colIndex}
-                    onClick={() => playRound(rowIndex, colIndex)}
-                    style={{
-                      width: "33%",
-                      aspectRatio: "1",
-                      border: "1px solid black",
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center"
-                    }}
-                  >
-                    {!col ? "" : col === 1 ? "O" : "X"}
-                  </div>
+                  <TicTacToeBox 
+                    key={colIndex} 
+                    onClick={playRound} 
+                    rowIndex={rowIndex} 
+                    colIndex={colIndex}
+                    col={col}
+                  /> 
                 )
               })}
             </div>
