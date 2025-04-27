@@ -1,4 +1,5 @@
 import React from 'react'
+import OXSymbol from './OXSymbol'
 
 const TicTacToeBox = ({onClick, rowIndex, colIndex, col}) => {
   return (
@@ -13,7 +14,7 @@ const TicTacToeBox = ({onClick, rowIndex, colIndex, col}) => {
         alignItems: "center"
       }}
     >
-      {!col ? "" : col === 1 ? "O" : "X"}
+      <OXSymbol sign={col} />
     </div>
   )
 }
