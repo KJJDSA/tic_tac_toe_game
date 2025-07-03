@@ -62,7 +62,7 @@ const Playing = () => {
       </div>
       <div className="game-info">
         <StatusBar winner={winner} isDraw={isDraw} nextPlayer={xIsNext ? "X" : "O"} />
-        <ResetButton onClick={handleReset} />
+        <ResetButton onReset={handleReset} />
       </div>
     </div>
   );
