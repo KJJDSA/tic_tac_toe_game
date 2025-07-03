@@ -1,11 +1,9 @@
-import React from 'react'
-
-const HeaderTitle = ({title}) => {
+const HeaderTitle = () => {
   return (
-    <div>
-      <h1>{title}</h1>
-    </div>
-  )
-}
+    <h1 className="text-5xl font-bold text-center text-cyan-400">
+      Tic Tac Toe
+    </h1>
+  );
+};
 
-export default HeaderTitle
+export default HeaderTitle;

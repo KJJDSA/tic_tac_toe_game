@@ -1,13 +1,11 @@
-import React from 'react'
-import HeaderTitle from '../Atoms/HeaderTitle'
+import HeaderTitle from "../Atoms/HeaderTitle";
 
-const Header = ({title}) => {
+const Header = () => {
   return (
-    // organism은 atom, molecule을 조합하여 만들어진다.
-    <div>
-      <HeaderTitle title={title}/>
-    </div>
-  )
-}
+    <header className="mb-8">
+      <HeaderTitle />
+    </header>
+  );
+};
 
-export default Header
+export default Header;

@@ -1,27 +1,11 @@
 import TicTacToeBox from "../Atoms/TicTacToeBox";
 
 const TicTacToe = ({ squares, onClick }) => {
-  const renderSquare = (i) => {
-    return <TicTacToeBox value={squares[i]} onClick={() => onClick(i)} />;
-  };
-
   return (
-    <div>
-      <div className="board-row">
-        {renderSquare(0)}
-        {renderSquare(1)}
-        {renderSquare(2)}
-      </div>
-      <div className="board-row">
-        {renderSquare(3)}
-        {renderSquare(4)}
-        {renderSquare(5)}
-      </div>
-      <div className="board-row">
-        {renderSquare(6)}
-        {renderSquare(7)}
-        {renderSquare(8)}
-      </div>
+    <div className="grid grid-cols-3 gap-3 bg-slate-700 p-3 rounded-lg">
+      {squares.map((square, i) => (
+        <TicTacToeBox key={i} value={square} onClick={() => onClick(i)} />
+      ))}
     </div>
   );
 };

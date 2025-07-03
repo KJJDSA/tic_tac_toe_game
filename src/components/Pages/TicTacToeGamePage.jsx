@@ -1,18 +1,16 @@
-import React from 'react'
-import MiniGameTameplate from '../Templates/MiniGameTameplate'
+import MiniGameTameplate from "../Templates/MiniGameTameplate";
+import Header from "../Organisms/Header";
+import Playing from "../Organisms/Playing";
 
 const TicTacToeGamePage = () => {
-  // 게임은 틱택토 로 고정
-  const gameData = {
-    title: '혼자서 하는 틱택토 게임',
-    gameId: 'tictactoe'
-  }
-
   return (
-    <div>
-      <MiniGameTameplate title={gameData.title} gameId={gameData.gameId}/>
+    <div className="bg-slate-800 min-h-screen flex items-center justify-center text-white">
+      <MiniGameTameplate
+        header={<Header />}
+        body={<Playing />}
+      />
     </div>
-  )
-}
+  );
+};
 
-export default TicTacToeGamePage
+export default TicTacToeGamePage;

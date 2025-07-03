@@ -56,14 +56,14 @@ const Playing = () => {
   }, [squares]);
 
   return (
-    <div className="game">
-      <div className="game-board">
+    <div className="flex flex-col items-center">
+      <div className="mb-4">
+        <StatusBar winner={winner} isDraw={isDraw} nextPlayer={xIsNext ? "X" : "O"} />
+      </div>
+      <div className="mb-4">
         <TicTacToe squares={squares} onClick={handleClick} />
       </div>
-      <div className="game-info">
-        <StatusBar winner={winner} isDraw={isDraw} nextPlayer={xIsNext ? "X" : "O"} />
-        <ResetButton onReset={handleReset} />
-      </div>
+      <ResetButton onReset={handleReset} />
     </div>
   );
 };
